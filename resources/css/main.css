@@ -1,0 +1,101 @@
+:root {
+  --color-blue: #417a97;
+  --color-green: #6fd08c;
+  --color-lavendar: #dddbf1;
+  --color-brown: #4e3d42;
+  --color-black: #1e1e24;
+  --grey-light-1: #faf9f9;
+  --grey-light-2: #f4f2f2;
+  --grey-light-3: #f0eeee;
+  --grey-light-4: #ccc;
+  --grey-dark-1: #333;
+  --grey-dark-2: #777;
+  --grey-dark-3: #999; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  line-height: 1.6rem;
+  color: var(--color-black);
+  background-color: var(--grey-light-1);
+  min-height: 100vh; }
+
+.landing__content {
+  background-image: url(https://images.unsplash.com/photo-1532009172808-fe52563c17aa?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1950&q=80);
+  background-size: cover;
+  background-position: center bottom;
+  height: 100vh;
+  position: relative;
+  -webkit-clip-path: polygon(20px 20px, calc(100% - 20px) calc(0% + 20px), calc(100% - 20px) calc(90% - 20px), calc(0% + 20px) calc(100% - 20px));
+  clip-path: polygon(20px 20px, calc(100% - 20px) calc(0% + 20px), calc(100% - 20px) calc(90% - 20px), calc(0% + 20px) calc(100% - 20px)); }
+
+.landing__icon {
+  position: relative;
+  top: 50px;
+  left: 50px;
+  height: 100px;
+  width: 100px;
+  background-color: white;
+  z-index: 20; }
+
+.landing__title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: sans-serif;
+  font-size: 10rem;
+  font-weight: 100;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 20px;
+  white-space: nowrap; }
+
+.landing__info-btn {
+  color: var(--color-blue);
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 40px;
+  font-weight: light;
+  font-family: sans-serif;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  border-radius: 30px;
+  background: #fff;
+  cursor: pointer;
+  box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5);
+  -webkit-animation: pulse 2s infinite;
+  z-index: 22; }
+
+.landing__info-btn:hover {
+  -webkit-animation: none;
+  animation: none; }
+
+.nav__btn {
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  top: 50px;
+  right: 50px;
+  z-index: 21;
+  background-color: white;
+  border-radius: 50%; }
