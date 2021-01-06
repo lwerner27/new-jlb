@@ -67,28 +67,49 @@
         z-index: 22;
     }
 
+    &__info-btn:active {
+        background: var(--grey-light-2);
+    }
+
     &__info-btn:hover {
         animation: none;
     }
 }
 
+// Nav Button Styles
 .nav-btn {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 10rem;
-    height: 10rem;
-    top: 5rem;
-    right: 5rem;
-    z-index: 21;
-    background-color: white;
-    border-radius: 50%;
+    &--menu,
+    &--cross {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 10rem;
+        height: 10rem;
+        top: 5rem;
+        right: 5rem;
+        z-index: 21;
+        background-color: white;
+        border-radius: 50%;
+    }
 
-    &__icon {
+    &--menu {
+        opacity: 0;
+        animation: hide-menu-icon 0.5s ease-in-out forwards;
+        animation-direction: reverse;
+        z-index: 30;
+    }
+
+    &--cross {
+        animation: rotate-cross 0.5s ease-in-out forwards;
+        animation-direction: reverse;
+    }
+    .nav-btn__icon,
+    .nav-btn__icon {
         height: 6.5rem;
         fill: var(--color-black);
-        // animation: spin 0.5s ease-out;
+        margin: 0;
+        padding: 0;
     }
 }
 
@@ -106,12 +127,24 @@
     }
 }
 
-// @keyframes spin {
-//     from {
-//         transform: rotate(0deg);
-//     }
+@keyframes hide-menu-icon {
+    0% {
+        transform: rotate(0deg);
+        opacity: 1;
+    }
 
-//     to {
-//         transform: rotate(360deg);
-//     }
-// }
+    100% {
+        transform: rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@keyframes rotate-cross {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
