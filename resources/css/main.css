@@ -172,7 +172,7 @@ main {
       outline: var(--color-blue) solid 0.75rem; }
     .about__card__text {
       width: 60%;
-      font-size: 2.75rem; }
+      font-size: 3rem; }
 
 @-webkit-keyframes pulse {
   0% { }
