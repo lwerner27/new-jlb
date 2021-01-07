@@ -1,0 +1,11 @@
+.container {
+    max-width: 120rem;
+    width: 80%;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}

@@ -28,10 +28,19 @@ html {
 body {
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
-  line-height: 1.6rem;
   color: var(--color-black);
-  background-color: var(--grey-light-1);
+  background-color: var(--grey-light-2);
   min-height: 100vh; }
+
+.container {
+  max-width: 120rem;
+  width: 80%; }
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start; }
 
 .landing__content {
   background-image: url(https://images.unsplash.com/photo-1532009172808-fe52563c17aa?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1950&q=80);
@@ -59,6 +68,8 @@ body {
 
 .landing__title {
   position: absolute;
+  text-align: center;
+  padding-left: 3rem;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -66,8 +77,9 @@ body {
   font-weight: 300;
   text-transform: uppercase;
   color: white;
-  letter-spacing: 20px;
-  white-space: nowrap; }
+  letter-spacing: 2rem;
+  white-space: nowrap;
+  border-bottom: white solid 3px; }
 
 .landing__info-btn {
   color: var(--color-blue);
@@ -131,6 +143,36 @@ body {
   fill: var(--color-black);
   margin: 0;
   padding: 0; }
+
+main {
+  margin: 5rem 0; }
+
+.about {
+  display: flex;
+  justify-content: center; }
+  .about__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 2.5rem;
+    box-shadow: 0 0.4rem 0.8rem 0 rgba(0, 0, 0, 0.2);
+    padding: 3rem;
+    border-radius: 1rem;
+    background-color: #fff; }
+    .about__card__title {
+      display: flex;
+      justify-content: center;
+      font-size: 10rem;
+      color: var(--color-blue);
+      border-bottom: var(--color-blue) solid 0.5rem;
+      margin-bottom: 3rem; }
+    .about__card__img {
+      width: 35%;
+      outline: var(--color-blue) solid 0.75rem; }
+    .about__card__text {
+      width: 60%;
+      font-size: 2.75rem; }
 
 @-webkit-keyframes pulse {
   0% { }
